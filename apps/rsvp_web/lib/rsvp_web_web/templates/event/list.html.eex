@@ -1,0 +1,8 @@
+<h1>All Events</h1>
+<a href="<%= Routes.event_path(@conn, :create) %>" class="button">Add Event</a>
+<%= render RsvpWebWeb.SharedView, "count.html", list: @events %>
+<div>
+    <%= for e <- @events do %>
+        <%= render "summary.html", event: e, conn: @conn %>
+    <% end %>
+</div>

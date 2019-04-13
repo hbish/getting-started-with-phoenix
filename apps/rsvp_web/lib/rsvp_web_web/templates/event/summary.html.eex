@@ -1,0 +1,11 @@
+<a href="<%= Routes.event_path(@conn, :show, @event.id) %>">
+    <div class="row">
+        <h4><%= @event.title %></h4>
+    </div>
+    <div class="row">
+        <div class="column"><%= @event.location %></div>
+        <div class="column">
+            <strong><%= format_date @event.date %></strong>
+        </div>
+    </div>
+</a>
